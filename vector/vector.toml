@@ -6,6 +6,7 @@ type = "stdin"
 [transforms.parse_json]
 type = "remap"
 inputs = ["stdin"]
+drop_on_error = true
 source = '''
 . = parse_json!(string!(.message))
 '''
