@@ -39,7 +39,7 @@ Thumbs.db
 *~
 
 # Vector
-vector-data/
+vector/data/
 
 # ClickHouse
 clickhouse-data/
