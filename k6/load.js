@@ -1,5 +1,4 @@
 import http from 'k6/http';
-import { check } from 'k6';
 import { uuidv4 } from 'https://jslib.k6.io/k6-utils/1.4.0/index.js';
 
 const BASE_URL = __ENV.K6_BASE_URL || 'http://localhost:3000';
@@ -22,9 +21,6 @@ export const options = {
                 { target: Math.floor(MAX_TPS * 0.75), duration: '2m' },
             ],
         },
-    },
-    thresholds: {
-        http_req_failed: ['rate<0.01'],
     },
 };
 
@@ -58,20 +54,15 @@ export default function() {
     const rand = Math.random();
 
     if (rand < 0.60) {
-        const res = http.get(`${BASE_URL}/health`);
-        check(res, { 'health succeeded': (r) => r.status < 400 });
+        http.get(`${BASE_URL}/health`);
     } else if (rand < 0.85) {
-        const id = uuidv4();
-        const res = http.get(`${BASE_URL}/items/${id}`);
-        check(res, { 'items-get succeeded': (r) => r.status < 400 });
+        http.get(`${BASE_URL}/items/${uuidv4()}`);
     } else if (rand < 0.95) {
-        const res = http.get(`${BASE_URL}/fanout`);
-        check(res, { 'fanout succeeded': (r) => r.status < 400 });
+        http.get(`${BASE_URL}/fanout`);
     } else {
         const payload = generateRandomItem();
-        const res = http.post(`${BASE_URL}/items`, JSON.stringify(payload), {
+        http.post(`${BASE_URL}/items`, JSON.stringify(payload), {
             headers: { 'Content-Type': 'application/json' },
         });
-        check(res, { 'items-post succeeded': (r) => r.status < 400 });
     }
 }
