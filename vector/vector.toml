@@ -1,20 +1,27 @@
-# Read from stdin
 [sources.stdin]
 type = "stdin"
 
-# Parse JSON from stdin
 [transforms.parse_json]
 type = "remap"
 inputs = ["stdin"]
 drop_on_error = true
 source = '''
 . = parse_json!(string!(.message))
+.ingestion_timestamp = now()
+
+# Convert downstream_calls array to JSON string if present
+if exists(.downstream_calls) {
+  .downstream_calls = to_string!(.downstream_calls)
+} else {
+  .downstream_calls = "[]"
+}
 '''
 
-# Write to a file
-[sinks.out]
-type = "file"
+[sinks.clickhouse]
+type = "clickhouse"
 inputs = ["parse_json"]
-path = "./data/vector-output.json"
-encoding.codec = "json"
+endpoint = "${CLICKHOUSE_HOST:-http://localhost:8123}"
+database = "${CLICKHOUSE_DATABASE:-observability}"
+table = "${CLICKHOUSE_TABLE:-logs}"
+skip_unknown_fields = true
 
