@@ -12,6 +12,6 @@ source = '''
 [sinks.postgres]
 type = "postgres"
 inputs = ["payload"]
-endpoint = "postgres://dev@localhost:5432/appdb"
+endpoint = "postgres://dev@postgres:5432/appdb"
 table = "logs"
 
