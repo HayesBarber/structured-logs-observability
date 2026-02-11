@@ -20,9 +20,9 @@ if exists(.downstream_calls) {
 [sinks.clickhouse]
 type = "clickhouse"
 inputs = ["parse_json"]
-endpoint = "${CLICKHOUSE_HOST:-http://localhost:8123}"
-database = "${CLICKHOUSE_DATABASE:-observability}"
-table = "${CLICKHOUSE_TABLE:-logs}"
+endpoint = "http://localhost:8123"
+database = "observability"
+table = "logs"
 skip_unknown_fields = true
 format = "json_each_row"
 
