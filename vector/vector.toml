@@ -1,21 +1,17 @@
 [sources.stdin]
 type = "stdin"
 
-[transforms.parse_json]
+[transforms.payload]
 type = "remap"
 inputs = ["stdin"]
 drop_on_error = true
 source = '''
-. = parse_json!(string!(.message))
-.ingestion_timestamp = now()
+.payload = .
 '''
 
-[sinks.clickhouse]
-type = "clickhouse"
-inputs = ["parse_json"]
-endpoint = "http://localhost:8123"
-database = "observability"
+[sinks.postgres]
+type = "postgres"
+inputs = ["payload"]
+endpoint = "postgres://dev@localhost:5432/appdb"
 table = "logs"
-skip_unknown_fields = true
-format = "json_each_row"
 
