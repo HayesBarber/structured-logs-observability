@@ -1,6 +1,14 @@
 [sources.stdin]
 type = "stdin"
 
+[transforms.payload]
+type = "remap"
+inputs = ["stdin"]
+drop_on_error = true
+source = '''
+.timestamp = now()
+'''
+
 [sinks.postgres]
 type = "postgres"
 inputs = ["payload"]
