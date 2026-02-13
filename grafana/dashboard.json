@@ -22,10 +22,7 @@
   "links": [],
   "panels": [
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -106,10 +103,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -138,10 +132,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -218,10 +209,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -302,10 +290,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -334,10 +319,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -389,10 +371,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -421,10 +400,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -506,10 +482,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -538,10 +511,7 @@
       "type": "timeseries"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -593,10 +563,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -625,10 +592,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -676,10 +640,7 @@
       "targets": [
         {
           "dataset": "appdb",
-          "datasource": {
-            "type": "grafana-postgresql-datasource",
-            "uid": "ffd2du1qe4yyoc"
-          },
+          "datasource": "grafana-postgresql-datasource",
           "editorMode": "code",
           "format": "table",
           "rawQuery": true,
@@ -708,10 +669,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "grafana-postgresql-datasource",
-        "uid": "ffd2du1qe4yyoc"
-      },
+      "datasource": "grafana-postgresql-datasource",
       "fieldConfig": {
         "defaults": {
           "color": {
