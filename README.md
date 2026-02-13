@@ -56,7 +56,7 @@ Open http://localhost:3000, create a PostgreSQL datasource with name `grafana-po
 ## Tech Stack
 
 - **Bun** — HTTP server runtime
-- **Vector** — Log ingestion and filtering
+- **Vector** — Log processing
 - **PostgreSQL** — Log storage
 - **Nginx** — Load balancing
 - **Grafana** — Visualization
