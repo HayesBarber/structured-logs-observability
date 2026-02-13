@@ -24,8 +24,8 @@ k6 run ./k6/load.js
 
 | Service | Port | Description |
 |---------|------|-------------|
-| API     | 3000 | Nginx load-balanced Bun HTTP servers |
-| Grafana | 3001 | Dashboards and log analytics |
+| API     | 3001 | Nginx load-balanced Bun HTTP servers |
+| Grafana | 3000 | Dashboards and log analytics |
 
 ## Endpoints
 
@@ -36,7 +36,7 @@ k6 run ./k6/load.js
 
 ## Grafana
 
-Open http://localhost:3001 and import the dashboard to see:
+Open http://localhost:3000 and import the dashboard to see:
 
 - Requests per second (TPS)
 - Error rates

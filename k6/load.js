@@ -1,7 +1,7 @@
 import http from 'k6/http';
 import { uuidv4 } from 'https://jslib.k6.io/k6-utils/1.4.0/index.js';
 
-const BASE_URL = __ENV.K6_BASE_URL || 'http://localhost:3000';
+const BASE_URL = __ENV.K6_BASE_URL || 'http://localhost:3001';
 const MAX_TPS = parseInt(__ENV.K6_MAX_TPS || '100');
 
 export const options = {
