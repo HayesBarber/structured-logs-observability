@@ -13,11 +13,11 @@ export const options = {
             preAllocatedVUs: 50,
             maxVUs: 200,
             stages: [
-                { target: Math.floor(MAX_TPS * 0.5), duration: '2m' },
+                { target: Math.floor(MAX_TPS * 0.5), duration: '1m' },
                 { target: Math.floor(MAX_TPS * 0.5), duration: '2m' },
                 { target: MAX_TPS, duration: '1m' },
                 { target: MAX_TPS, duration: '2m' },
-                { target: Math.floor(MAX_TPS * 0.3), duration: '1m' },
+                { target: Math.floor(MAX_TPS * 0.75), duration: '1m' },
                 { target: Math.floor(MAX_TPS * 0.75), duration: '2m' },
             ],
         },
