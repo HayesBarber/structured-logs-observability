@@ -34,6 +34,10 @@ You can specify a max TPS
 k6 run -e K6_MAX_TPS=500 ./k6/load.js
 ```
 
+## Demo
+
+[Demo](assets/demo.mov)
+
 ## Services
 
 | Service | Port | Description |
