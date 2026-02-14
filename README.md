@@ -22,10 +22,16 @@ Start the services
 docker compose up -d
 ```
 
-Once running, generate load with k6:
+Once running, generate load with k6
 
 ```bash
 k6 run ./k6/load.js
+```
+
+You can specify a max TPS
+
+```bash
+k6 run -e K6_MAX_TPS=500 ./k6/load.js
 ```
 
 ## Services
