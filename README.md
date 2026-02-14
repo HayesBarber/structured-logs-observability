@@ -4,7 +4,7 @@ A proof-of-concept demonstrating how meaningful observability signals can be ext
 
 ## Architecture
 
-![Architecture](assests/architecture.svg)
+![Architecture](assets/architecture.svg)
 
 Traffic flows from the k6 load generator through Nginx to Bun HTTP servers. Servers emit structured JSON logs that Vector ingests, and forwards to PostgreSQL for storage and analytics. Grafana provides dashboards for visualization.
 
@@ -59,7 +59,7 @@ Open http://localhost:3000, create a PostgreSQL datasource with name `grafana-po
 - P95 latency
 - Requests by route
 
-![Dashboard](assests/dashboard.png)
+![Dashboard](assets/dashboard.png)
 
 ## Tech Stack
 
